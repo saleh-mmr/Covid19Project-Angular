@@ -1,0 +1,25 @@
+.top-home-page{
+  height: 100px;
+}
+.first-part-home-page{
+  height: 27rem;
+}
+.corona-statistic{
+  height: 100vh;
+}
+.home-page-heath-care-txt{
+  text-align: center;
+  font-size: 5rem;
+  text-transform: uppercase;
+  letter-spacing: normal;
+  font-weight: 700;
+  font-family: "Calibri";
+  margin: revert;
+  margin-top: 160px;
+  color: #ffffff;
+}
+.footer-text-mainpage{
+  font-family: b nazanin;
+  text-align: right;
+  font-size: larger;
+}

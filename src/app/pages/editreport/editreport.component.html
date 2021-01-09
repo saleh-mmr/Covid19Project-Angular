@@ -1,0 +1,134 @@
+<div class="new-report-content">
+
+  <mat-horizontal-stepper [linear]="true" #stepper class="main-stepper-newreport">
+
+    <mat-step [stepControl]="patientinfoForm">
+
+      <form [formGroup]="patientinfoForm">
+
+          <ng-template matStepLabel>مشخصات و علائم بیمار</ng-template>
+
+          <div class="text-center patient-info-content">
+
+            <div class="row">
+              <div class="col-6">
+                <mat-form-field class="patient-info-input-content">
+                  <mat-label class="patient-info-input-label">نام خانوادگی بیمار</mat-label>
+                  <input class="patient-info-input"  matInput placeholder="نام خانوادگی بیمار را وارد کنید" formControlName="lastName" required>
+                </mat-form-field>
+              </div>
+              <div class="col-6">
+                <mat-form-field class="patient-info-input-content">
+                  <mat-label class="patient-info-input-label">نام بیمار</mat-label>
+                  <input class="patient-info-input" matInput placeholder="نام بیمار را وارد کنید" formControlName="firstName" required>
+                </mat-form-field>
+              </div>
+            </div>
+
+            <div class="row">
+              <div class="col-6">
+                <mat-form-field class="patient-info-input-content">
+                  <mat-label class="patient-info-input-label">کدملی بیمار</mat-label>
+                  <input class="patient-info-input" matInput placeholder="کدملی بیمار را وارد کنید" formControlName="nationalCode" required>
+                </mat-form-field>
+              </div>
+              <div class="col-6">
+                <mat-form-field class="patient-info-input-content">
+                  <mat-label class="patient-info-input-label">شماره تماس بیمار</mat-label>
+                  <input class="patient-info-input"  matInput placeholder="شماره تماس بیمار را وارد کنید" formControlName="phoneNumber" required>
+                </mat-form-field>
+              </div>
+            </div>
+
+            <div class="row">
+              <div class="col-6">
+                <mat-form-field class="symptoms-chip-list">
+                  <mat-chip-list #chipList aria-label="Symptom Sellection">
+                    <mat-chip
+                      *ngFor="let s of symptom"
+                      [selectable]="selectable"
+                      [removable]="removable"
+                      (removed)="remove(s)">
+                      {{s}}
+                      <mat-icon matChipRemove *ngIf="removable">cancel</mat-icon>
+                    </mat-chip>
+                    <input class="patient-symptoms-input"
+                           placeholder="علائم بیمار"
+                           #symptomInput
+                           [formControl]="symptomCtrl"
+                           [matAutocomplete]="auto"
+                           [matChipInputFor]="chipList"
+                           [matChipInputSeparatorKeyCodes]="separatorKeysCodes"
+                           (matChipInputTokenEnd)="add($event)">
+                  </mat-chip-list>
+                  <mat-autocomplete #auto="matAutocomplete" (optionSelected)="selected($event)">
+                    <mat-option *ngFor="let symptom of filteredSymptoms | async" [value]="symptom">
+                      {{symptom}}
+                    </mat-option>
+                  </mat-autocomplete>
+                </mat-form-field>
+              </div>
+              <div class="col-6">
+                <mat-form-field class="patient-info-input-content">
+                  <mat-label class="patient-info-input-label">تاریخ تولد بیمار</mat-label>
+                  <input matInput class="patient-info-input" type="date" formControlName="birthDate" required>
+                </mat-form-field>
+              </div>
+            </div>
+
+            <div class="row">
+              <div class="col-6 patient-status-form-div">
+                <mat-form-field appearance="fill" class="patient-status-form-field">
+                  <mat-label class="patient-status-label">وضعیت بیماری را انتخاب کنید</mat-label>
+                  <mat-select class="patient-status-input"  formControlName="diseaseStatus">
+                    <mat-option value="قطعی کرونا" class="patient-status-options">قطعی کرونا</mat-option>
+                    <mat-option value="مشکوک به کرونا" class="patient-status-options">مشکوک به کرونا</mat-option>
+                    <mat-option value="آنفولانزا" class="patient-status-options">آنفولانزا</mat-option>
+                  </mat-select>
+                </mat-form-field>
+              </div>
+              <div class="col-6 patient-status-form-div">
+                <mat-form-field appearance="fill" class="patient-status-form-field">
+                  <mat-label class="patient-status-label">وضعیت بیمار را انتخاب کنید</mat-label>
+                  <mat-select class="patient-status-input"  formControlName="patientStatus">
+                    <mat-option value="قرنطینه" class="patient-status-options">قرنطینه</mat-option>
+                    <mat-option value="بستری در بیمارستان" class="patient-status-options">بستری در بیمارستان</mat-option>
+                    <mat-option value="عادی" class="patient-status-options">عادی</mat-option>
+                    <mat-option value="فوت شده" class="patient-status-options">فوت شده</mat-option>
+                  </mat-select>
+                </mat-form-field>
+              </div>
+            </div>
+
+          </div>
+
+        </form>
+
+      <div>
+        <button mat-button matStepperNext class="next-steper-btn" (click)="edit_current_report(stepper)">بعدی</button>
+      </div>
+
+    </mat-step>
+
+
+    <mat-step>
+      <ng-template matStepLabel>نتیجه گزارش</ng-template>
+
+        <div class="response-content">
+          <p [textContent]="pfName"></p>
+          <p [textContent]="plName"></p>
+          <p [textContent]="pphone"></p>
+          <p [textContent]="pcode"></p>
+          <p [textContent]="pbirth"></p>
+          <p [textContent]="symptom"></p>
+          <p>نتیجه گزارش مربوط به بیمار فوق</p>
+          <p [textContent]="psystemdisease"></p><br>
+          <p [textContent]="puserdisease"></p>
+          <p [textContent]="pstatus"></p>
+        </div>
+
+    </mat-step>
+
+  </mat-horizontal-stepper>
+
+</div>

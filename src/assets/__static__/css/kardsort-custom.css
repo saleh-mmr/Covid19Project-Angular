@@ -1,0 +1,22 @@
+.nav-tabs .nav-item .nav-link {
+  color: var (- blue);
+  font-size: .9rem;
+}
+
+.nav-tabs .nav-item .nav-link.active {
+  font-weight: 700;
+}
+
+label {
+  font-size: .9rem;
+}
+
+.delete-highlight {
+  background-color: #ffc9c9;
+  border-radius: 5px;
+  opacity: 0.5;
+}
+
+.topbar-divider {
+  margin: auto .3rem! important;
+}

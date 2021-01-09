@@ -1,0 +1,50 @@
+.input-container{
+  width: 400px;
+  margin: auto;
+  height: 60px;
+  border-radius: 50px;
+  margin-bottom: 5%;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+
+.login-form{
+  text-align: center;
+  width: 550px;
+  margin: auto;
+}
+.input-box{
+  width: 95%;
+  float: left;
+  height: 60px;
+  border-radius: 50px;
+  border: none;
+  outline: none;
+  font-size: 16px;
+}
+.login-btn{
+  width: 400px;
+  margin: auto auto 5%;
+  background: #0c836f;
+  height: 60px;
+  border-radius: 50px;
+  border: none;
+  outline: none;
+  color: white;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  font-size: 23px;
+  font-family: "B Titr";
+}
+.user-icon{
+  height: 0%;
+  width: 181%;
+}
+.key-icon{
+  height: 0%;
+  width: 181%;
+  font-size: 13.95px;
+}
+.login-icon{
+  margin-top: 0.15em;
+}
+

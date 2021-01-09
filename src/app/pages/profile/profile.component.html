@@ -1,0 +1,71 @@
+<div class="px-3 main-profile-content">
+  <div class="row profile-row default">
+
+
+    <div #main class="main-content p-4 col-1">
+
+      <div class="header-content-main mb-2">
+        <div class="row header-content">
+          <div class="col-9 header-context-titr">
+            <p class="dheader-title" *ngIf="titrflag0 && !titrflag1 && !titrflag2">گزارش جدید</p>
+            <p class="dheader-title" *ngIf="!titrflag0 && titrflag1 && !titrflag2">گزارش های اخیر</p>
+            <p class="dheader-title" *ngIf="titrflag0 && titrflag1 && !titrflag2">افراد مرتبط</p>
+            <p class="dheader-title" *ngIf="!titrflag0 && !titrflag1 && titrflag2">ویرایش پروفایل</p>
+          </div>
+          <div class="col-3 header-context-logo text-right p-4">
+            <img src="{{logo}}" alt="" style=" width: 70px">
+          </div>
+
+        </div>
+      </div>
+
+      <div class="profile-content-root">
+        <div class="dynamic-component-content">
+          <router-outlet></router-outlet>
+        </div>
+        <div *ngIf="flag">
+          <button (click)="return()" class="return-to-profile-btn">بازگشت</button>
+        </div>
+      </div>
+
+    </div>
+
+
+    <div #sidebar class="info-content-main p-4 col-11">
+      <div class="p-4 info-content">
+
+        <div class="info-card text-center">
+          <div class="info-card-avatar m-3">
+            <i class="fa fa-user-circle-o user-icon-avatar" aria-hidden="true"></i>
+          </div>
+
+          <div class="col-10 user-info-dtext-content text-center">
+            <p class="dtext-en" [textContent]="x"></p>
+            <p class="dtext-en" [textContent]="y"></p>
+          </div>
+        </div>
+
+        <div class="user-tools">
+          <div class="user-tools-btns-content">
+            <button class="user-tool-btn" [routerLink]="['new-report']" (click)="show_new_report_page()">ثبت گزارش جدید</button>
+          </div>
+          <div class="user-tools-btns-content">
+            <button class="user-tool-btn" [routerLink]="['recent-reports']" (click)="show_recent_report_page()">گزارش های اخیر</button>
+          </div>
+          <div class="user-tools-btns-content">
+            <button class="user-tool-btn" [routerLink]="['related-people']" (click)="show_related_people_page()">افراد مرتبط</button>
+          </div>
+          <div class="user-tools-btns-content">
+            <button class="user-tool-btn" [routerLink]="['edit-profile']" (click)="show_editprofile_page()">ویرایش پروفایل</button>
+          </div>
+          <div class="user-tools-btns-content">
+            <button class="user-tool-btn" (click)="logout()">خروج</button>
+          </div>
+        </div>
+
+      </div>
+    </div>
+
+
+  </div>
+</div>

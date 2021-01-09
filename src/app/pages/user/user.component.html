@@ -1,0 +1,35 @@
+<div class="px-3">
+  <div class="row login-row">
+
+
+    <div class="col-4 signup-col">
+      <div class="vertical-center  text-center signup-content">
+        <h4 class="text-right signup-col-text">افرادی که مبتلا به کرونا هستند، باید مراقب های پشتیبانی برای کاهش علائم دریافت کنند.</h4>
+        <br/>
+        <h4 class="text-right signup-col-text">مراقب سلامت خود باشید و با رعایت این نکات از دیگران نیز محافظت کنید.</h4>
+        <div *ngIf="flag">
+          <button type="button" class="signup-login-btn" (click)="changeform()">ثبت نام</button>
+        </div>
+        <div  *ngIf="!flag">
+          <button type="button" class="signup-login-btn" (click)="changeform()">ورود</button>
+        </div>
+      </div>
+    </div>
+
+
+    <div class="col-8 login-col">
+      <div class="login-header text-right p-4 text-black">
+        <img src="{{logo}}" alt="" style=" width: 70px">
+      </div>
+
+      <div *ngIf="flag">
+        <app-login></app-login>
+      </div>
+      <div *ngIf="!flag">
+        <app-signup></app-signup>
+      </div>
+
+    </div>
+
+  </div>
+</div>

@@ -1,0 +1,55 @@
+<div class="recent-report-content">
+  <div>
+    <div class="main-table-content">
+
+      <table mat-table [dataSource]="dataSource" class="mat-elevation-z8 table">
+
+        <!-- افزودن -->
+        <ng-container matColumnDef="add">
+          <th mat-header-cell *matHeaderCellDef class="header-table-title"></th>
+          <td mat-cell *matCellDef="let element" class="table-records-field"><a routerLink="/profile/add-connection/{{element.id}}">افزودن</a></td>
+        </ng-container>
+
+        <!-- آخرین وضعیت بیماری -->
+        <ng-container matColumnDef="disease">
+          <th mat-header-cell *matHeaderCellDef class="header-table-title" style="width: 14%"> آخرین وضعیت بیماری </th>
+          <td mat-cell *matCellDef="let element" class="table-records-field">{{element.disease}}</td>
+        </ng-container>
+
+        <!-- آخرین وضعیت بیمار -->
+        <ng-container matColumnDef="status">
+          <th mat-header-cell *matHeaderCellDef class="header-table-title" style="width: 14%"> آخرین وضعیت بیمار </th>
+          <td mat-cell *matCellDef="let element" class="table-records-field"> {{element.status}} </td>
+        </ng-container>
+
+        <!-- کدملی -->
+        <ng-container matColumnDef="nationalcode">
+          <th mat-header-cell *matHeaderCellDef class="header-table-title" style="width: 14%"> کدملی </th>
+          <td mat-cell *matCellDef="let element" class="table-records-field"> {{element.nationalcode}} </td>
+        </ng-container>
+
+        <!-- نام خانوادگی -->
+        <ng-container matColumnDef="lname">
+          <th mat-header-cell *matHeaderCellDef class="header-table-title" style="width: 14%"> نام خانوادگی </th>
+          <td mat-cell *matCellDef="let element" class="table-records-field"> {{element.lname}} </td>
+        </ng-container>
+
+        <!-- نام -->
+        <ng-container matColumnDef="fname">
+          <th mat-header-cell *matHeaderCellDef class="header-table-title" style="width: 10%"> نام </th>
+          <td mat-cell *matCellDef="let element" class="table-records-field"> {{element.fname}} </td>
+        </ng-container>
+
+        <!-- ردیف -->
+        <ng-container matColumnDef="position">
+          <th mat-header-cell *matHeaderCellDef class="header-table-title" style="width: 7%"> ردیف </th>
+          <td mat-cell *matCellDef="let element" class="table-records-field"> {{element.position}} </td>
+        </ng-container>
+
+        <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+        <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+      </table>
+
+    </div>
+  </div>
+</div>

@@ -1,0 +1,90 @@
+.new-report-content {
+  height: 100%;
+  margin: 2%;
+  text-align: center;
+}
+.main-stepper-newreport{
+  padding: 1%;
+  border-radius: 3%;
+}
+.mat-step-header .mat-step-icon-selected, .mat-step-header .mat-step-icon-state-done, .mat-step-header .mat-step-icon-state-edit {
+  background-color: #026b59;
+  color: #fff;
+}
+.patient-info-content{
+  height: 60%;
+  margin: 0%;
+}
+.patient-info-input-content{
+  width: 60%;
+  text-align: right;
+}
+.patient-info-input-label{
+  font-size: 18px;
+  font-family: "B Nazanin";
+}
+.patient-info-input{
+  height: 60px;
+  font-size: 22px;
+  font-family: "B Nazanin";
+  text-align: right;
+}
+.patient-info-input::placeholder{
+  height: 60px;
+  font-size: 15px;
+  font-family: "B Nazanin";
+  text-align: right;
+}
+
+.symptoms-chip-list{
+  height: 50%;
+  font-size: 18px;
+  width: 60%;
+  font-family: "B Nazanin";
+  text-align: right;
+}
+.patient-symptoms-input{
+  width: 50%;
+  text-align: right;
+  font-family: "B Nazanin";
+}
+
+.patient-status-form-field{
+  font-family: "B Nazanin";
+  width: 60%;
+  text-align: right;
+}
+.patient-status-label{
+  font-family: "B Nazanin";
+  font-size: 18px;
+  width: 60%;
+  text-align: right;
+}
+.patient-status-input{
+  font-size: 18px;
+  font-family: "B Nazanin";
+  text-align: right;
+}
+.patient-status-options{
+  font-size: 18px;
+  font-family: "B Nazanin";
+}
+
+.response-content{
+  text-align: center;
+}
+
+.next-steper-btn{
+  width: 220px;
+  background-color: #0c836f;
+  border-radius: 50px;
+  margin: 1.5%;
+  text-align: center;
+  border: 2px solid white;
+  color: white;
+  height: 50px;
+  outline: none;
+  font-weight: bold;
+  font-size: 20px;
+  font-family: "B Titr", serif;
+}

@@ -1,0 +1,130 @@
+.col-1,.col-11,.col-9,.col-3{
+  transition-duration: 1s;
+}
+.main-profile-content{
+  background-color: #0c836f91;
+  background-size: cover;
+  height: 100vh;
+}
+.profile-row{
+  height: 98vh;
+}
+.main-content{
+  height: 98vh;
+  background-size: cover;
+}
+.header-content{
+  margin: 0%;
+  height: 100%;
+  background: white;
+  border-radius: 25px;
+  box-shadow: 0 15px 40px 0 rgba(0, 0, 0, 0.3);
+}
+.header-context-titr{
+  text-align: center;
+  font-family: "B Titr";
+  font-size: 38px;
+  color: #026b59;
+  margin: auto;
+}
+.dheader-title{
+  margin-right: -29%;
+}
+.header-context-logo{
+}
+.profile-content-root{
+  height: 86%;
+  background: white;
+  border-radius: 25px;
+  box-shadow: 0 15px 40px 0 rgba(0, 0, 0, 0.3);
+}
+.dynamic-component-content{
+  height: 85%;
+}
+.info-content-main{
+}
+.info-content{
+  height: 100%;
+  background: white;
+  border-radius: 25px;
+  box-shadow: 0 15px 40px 0 rgba(0, 0, 0, 0.3);
+}
+.info-card{
+  height: 30%;
+}
+.info-card-avatar{
+}
+.user-icon-avatar{
+  font-size: 100px;
+  margin-top: 0.1em;
+  margin-right: 0.1em;
+}
+.user-info-dtext-content{
+  margin: auto;
+}
+.dtext-en{
+  font-family: sans-serif;
+  font-size: larger;
+}
+.edit-info-btn-content{
+  text-align: -webkit-right;
+}
+.edit-info-btn{
+  background-color: #089a82;
+  border: none;
+  color: white;
+  text-align: center;
+  outline: none;
+  display: block;
+  height: 40px;
+  width: 40px;
+  border-radius: 50%;
+  font-size: x-small;
+}
+.user-tools{
+  border-radius: inherit;
+  border: solid #0c836f;
+  height: 66%;
+  text-align: center;
+}
+.user-tool-btn{
+  width: 60%;
+  background-color: #0c836f;
+  border-radius: 50px;
+  margin: 1.5%;
+  text-align: center;
+  border: 2px solid white;
+  color: white;
+  height: 60px;
+  outline: none;
+  font-weight: bold;
+  font-size: 23px;
+  font-family: "B Titr", serif;
+}
+.return-to-profile-btn{
+  width: 120px;
+  background-color: #0c836f;
+  border-radius: 50px;
+  margin: 1.5%;
+  text-align: center;
+  border: 2px solid white;
+  color: white;
+  height: 40px;
+  outline: none;
+  font-weight: bold;
+  font-size: 18px;
+  font-family: "B Titr", serif;
+}
+.signin-btn-header{
+  background-color: #ffffff;
+  border-radius: 50px;
+  border: 2px solid white;
+  color: #304786;
+  outline: none;
+  font-weight: bold;
+  font-size: 15px;
+  font-family: B Titr;
+  width: 200%;
+  height: 49px;
+  border-color: #3375ec;
+}

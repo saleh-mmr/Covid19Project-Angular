@@ -1,0 +1,41 @@
+.recent-report-content{
+  height: 100%;
+  margin: auto;
+  text-align: center;
+  margin: 2%;
+}
+.main-table-content{
+  padding: 3%;
+}
+.table {
+  width: 100%;
+}
+.header-table-title{
+  text-align: center;
+  font-family: "B Titr";
+  font-size: 17px;
+  padding: 1%;
+  color: #026b59;
+  vertical-align: inherit;
+}
+.table-records-field{
+  font-family: "B Nazanin";
+  font-size: 18px;
+  padding: 1%;
+  vertical-align: inherit;
+}
+.edit-report-btn-table-recent-reports{
+  width: 85px;
+  background-color: #0c836f;
+  border-radius: 50px;
+  margin: 1.5%;
+  text-align: center;
+  border: 2px solid white;
+  color: white;
+  height: 40px;
+  outline: none;
+  font-weight: bold;
+  font-size: 15px;
+  font-family: "B Titr", serif;
+}
+

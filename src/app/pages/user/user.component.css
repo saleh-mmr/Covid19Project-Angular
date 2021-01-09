@@ -1,0 +1,44 @@
+.login-row{
+  height: 100vh;
+}
+
+.signup-col{
+  height: 100vh;
+  background: url("../../../assets/login-back1.png");
+  background-size: cover;
+}
+.signup-content {
+  direction: rtl;
+  margin: 0;
+  position: absolute;
+  top: 40%;
+  left: 50%;
+  -ms-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+  width: 61%;
+}
+.signup-col-text{
+  color: white;
+  text-align: justify;
+  font-family: "B Nazanin";
+  font-size: 24px;
+}
+
+.signup-login-btn{
+  width: 75%;
+  background-color: #0c836f;
+  border-radius: 50px;
+  margin-top: 15%;
+  border: 2px solid white;
+  color: white;
+  height: 60px;
+  outline: none;
+  font-weight: bold;
+  font-size: 23px;
+  font-family: "B Titr";
+}
+
+.login-col{
+  width: 60vh;
+  background-color: white;
+}

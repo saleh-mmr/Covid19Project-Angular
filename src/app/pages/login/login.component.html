@@ -1,0 +1,21 @@
+<div class="form-content">
+<div class="text-center"><img src="{{image1}}" alt=""></div>
+<form action="" class="login-form" [formGroup]="loginForm" (ngSubmit)="login()">
+  <div class="input-container">
+    <div class="user-icon">
+      <i class="fa fa-user fa-3x h-100 login-icon" aria-hidden="true" style="color: #0c836f;"></i>
+    </div>
+    <input type="text" name="username" placeholder="نام کاربری خود را وارد کنید" id="username" class="input-box text-center" formControlName="username">
+  </div>
+  <div class="input-container">
+    <div class=" key-icon">
+      <i class="fa fa-key fa-3x h-100 login-icon" aria-hidden="true" style="color: #0c836f;"></i>
+    </div>
+    <input type="password" name="password" placeholder="رمزعبور خود را وارد کنید" id="password" class="input-box text-center" formControlName="password">
+  </div>
+  <div>
+    <button type="submit" class="login-btn">ورود</button>
+  </div>
+</form>
+</div>
+

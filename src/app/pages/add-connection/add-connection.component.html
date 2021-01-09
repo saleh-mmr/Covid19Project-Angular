@@ -1,0 +1,19 @@
+<div class="form-content">
+  <form action="" class="login-form" [formGroup]="connectionForm" (ngSubmit)="add_connection()">
+    <div class="input-container">
+      <div class="user-icon">
+        <i class="fa fa-mobile fa-4x h-100" aria-hidden="true" style="color: #0c836f; margin-top: 6px;"></i>
+      </div>
+      <input type="text" name="phonenumber" placeholder="شماره تماس را وارد کنید" id="phonenumber" class="input-box text-center" formControlName="phoneNumber">
+    </div>
+    <div class="input-container">
+      <div class="user-icon">
+        <i class="fa fa-envelope fa-3x h-100" aria-hidden="true" style="color: #0c836f; margin-top: 6px;"></i>
+      </div>
+      <input type="text" name="email" placeholder="ایمیل را وارد کنید" id="email" class="input-box text-center" formControlName="email">
+    </div>
+    <div>
+      <button type="submit" class="login-btn">ثبت</button>
+    </div>
+  </form>
+</div>

@@ -1,0 +1,38 @@
+<div class="form-contetnt">
+
+<div class="text-center">
+  <img src="{{image1}}" alt="">
+</div>
+<form action="" class="signup-form" [formGroup]="signupForm" (ngSubmit)="signup()">
+
+  <div class="input-container">
+    <div class="signup-icons">
+      <i class="fa fa-user fa-3x h-100 signup-icon" aria-hidden="true" style="color: #0c836f;"></i>
+    </div>
+    <input type="text" name="username" placeholder="نام کاربری خود را وارد کنید" id="username" class="input-box text-center" formControlName="username">
+  </div>
+
+  <div class="input-container">
+    <div class="signup-icons">
+      <i class="fa fa-envelope fa-3x h-100 signup-icon" aria-hidden="true" style="color: #0c836f;"></i>
+    </div>
+    <input type="text" name="email" placeholder="ایمیل خود را وارد کنید" id="email" class="input-box text-center" formControlName="email">
+  </div>
+
+  <div class="input-container">
+    <div class="signup-icons">
+      <i class="fa fa-key fa-3x h-100 signup-icon" aria-hidden="true" style="color: #0c836f;"></i>
+    </div>
+    <input type="password" name="password" placeholder="رمز عبور خود را وارد کنید" id="password" class="input-box text-center" formControlName="password">
+  </div>
+
+  <div class="input-container">
+    <div class="signup-icons">
+      <i class="fa fa-key fa-3x h-100 signup-icon" aria-hidden="true" style="color: #0c836f;"></i>
+    </div>
+    <input type="password" name="cpassword" placeholder="رمز عبور خود را مجددا وارد کنید" id="cpassword" class="input-box text-center" formControlName="cpassword">
+  </div>
+
+    <button type="submit" class="signup-form-btn">ثبت نام</button>
+    </form>
+</div>

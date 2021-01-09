@@ -1,0 +1,436 @@
+<div id="overlayer"></div>
+<div class="loader">
+  <div class="spinner-border text-primary" role="status">
+    <span class="sr-only">Loading...</span>
+  </div>
+</div>
+
+<div dir="rtl" class="site-wrap">
+  <div class="site-mobile-menu site-navbar-target">
+    <div class="site-mobile-menu-header">
+      <div class="site-mobile-menu-close mt-3">
+        <span class="icon-close2 js-menu-toggle"></span>
+      </div>
+    </div>
+    <div class="site-mobile-menu-body"></div>
+  </div>
+
+
+  <header class="site-navbar light js-sticky-header site-navbar-target" role="banner">
+    <div class="container">
+      <div class="row align-items-center">
+        <div class="col-6 col-xl-2">
+          <div class="mb-0 site-logo"><a href="" class="mb-0">Covid<span
+            class="text-primary">.</span> </a></div>
+        </div>
+        <div class="col-12 col-md-10 d-none d-xl-block">
+          <nav class="site-navigation position-relative text-right" role="navigation">
+            <ul class="site-menu main-menu js-clone-nav mr-auto d-none d-lg-block">
+              <li><a href="" class="nav-link" style="font-family: B Titr">درباره ما</a></li>
+              <li><a href="" class="nav-link" style="font-family: B Titr">تماس با ما</a></li>
+              <li><a href="" class="nav-link" style="font-family: B Titr">سوالات متداول</a></li>
+              <li><button style="background-color: #edf1fc; border-radius: 50px; border: 2px solid white; color: #304786; outline: none; font-weight: bold; font-size: 15px; font-family: B Titr; width: 95px; height: 50px; border-color: #3375ec;" >ورود</button></li>
+              <li><button style="background-color: #ffffff; border-radius: 50px; border: 2px solid white; color: #304786; outline: none; font-weight: bold; font-size: 15px; font-family: B Titr; width: 95px; height: 50px; border-color: #3375ec; margin-right: 8px;" >ثبت نام</button></li>
+
+            </ul>
+          </nav>
+        </div>
+        <div class="col-6 d-inline-block d-xl-none ml-md-0 py-3" style="position: relative; top: 3px;"><a
+          href="#" class="site-menu-toggle js-menu-toggle float-right"><span
+          class="icon-menu h3 text-black"></span></a></div>
+      </div>
+    </div>
+  </header>
+
+
+
+
+  <div class="hero-v1">
+    <div class="container">
+      <div class="row align-items-center">
+
+        <div class="col-4 text-center" style="height: 24rem;">
+          <div>
+            <h2 style="font-family: B nazanin;text-align: center;font-size: 2vh;color:#4e73df;font-weight: 900;margin-top: 100px;margin-bottom: 35px">در خانه بمانیم</h2>
+          </div>
+          <div>
+            <h1 style="margin: 1rem 0 0;text-align: center;font-family: B Titr;font-weight: 900;color: #4e73df;font-size: 5vh;">همه با هم علیه کرونا</h1>
+          </div>
+        </div>
+
+        <div class="col-8" style="height: 39rem;">
+          <img src="{{image1}}" alt=""  style="height: 39rem;">
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+  <div class="corona-statistic container" style="margin-top: 90px;">
+
+    <div class="row mb-3">
+      <div class="col-lg-7 text-center mx-auto">
+        <h1 style="text-align: center; font-family: B Titr; font-weight: 900; color: #3e5db7; font-size: 2rem;">آمار و ارقام جهانی</h1>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-lg-4">
+        <div class="data">
+            <span class="icon text-primary">
+                <span class="flaticon-virus"></span>
+            </span>
+          <strong class="d-block number" style="margin: 20px;" [textContent]="TotalConfirmed"></strong>
+          <span class="label">تایید شده</span>
+        </div>
+      </div>
+      <div class="col-lg-4">
+        <div class="data">
+            <span class="icon text-primary">
+                <span class="flaticon-virus"></span>
+            </span>
+          <strong class="d-block number" style="margin: 20px;" [textContent]="TotalDeaths"></strong>
+          <span class="label">جان باخته</span>
+        </div>
+      </div>
+      <div class="col-lg-4">
+        <div class="data">
+            <span class="icon text-primary">
+              <span class="flaticon-virus"></span>
+            </span>
+          <strong class="d-block number" style="margin: 20px;" [textContent]="TotalRecovered"></strong>
+          <span class="label">بهبود یافته</span>
+        </div>
+      </div>
+    </div>
+
+      <div class="first-part-home-page"
+           style="margin-top: 90px;" data-aos="fade-right"  data-aos-offset="300"   data-aos-easing="ease-in-sine" data-aos-duration="500">
+        <div class="row mb-3">
+          <div class="col-lg-7 text-center mx-auto">
+            <h1 style="text-align: center; font-family: B Titr; font-weight: 900; color: #3e5db7; font-size: 2rem;">هفت روز اخیر در ایران چگونه گذشت؟</h1>
+          </div>
+        </div>
+        <canvas baseChart
+                [datasets]="barChartData"
+                [labels]="barChartLabels"
+                [options]="barChartOptions"
+                [legend]="barChartLegend"
+                [chartType]="barChartType">
+        </canvas>
+      </div>
+    </div>
+
+
+  <div class="container" >
+    <div class="row">
+      <div class="col-lg-3"
+           data-aos="fade-up"
+           data-aos-delay="600"
+           data-aos-duration="1000">
+        <div class="feature-v1 d-flex align-items-center" style="border: #3375ec; border-style: solid;  border-radius: 50%; width: 125px; height: 106px;">
+          <div class="icon-wrap mr-3">
+            <span class="flaticon-protection"></span>
+          </div>
+          <div>
+            <h3 style="font-family: B titr;text-align: right;margin-right: 10px;color: #304786;">مراقبت</h3>
+          </div>
+        </div>
+      </div>
+      <div class="col-lg-3"
+           data-aos="fade-up"
+           data-aos-delay="400"
+           data-aos-duration="1000">
+        <div class="feature-v1 d-flex align-items-center" style="border: #3375ec; border-style: solid;  border-radius: 50%; width: 125px; height: 106px;">
+          <div class="icon-wrap mr-3">
+            <span class="flaticon-patient"></span>
+          </div>
+          <div >
+            <h3 style="font-family: B titr;text-align: right;margin-right: 10px;color: #304786;">پیشگیری</h3>
+          </div>
+        </div>
+      </div>
+      <div class="col-lg-3"
+           data-aos="fade-up"
+           data-aos-delay="200"
+           data-aos-duration="1000">
+        <div class="feature-v1 d-flex align-items-center" style="border: #3375ec; border-style: solid;  border-radius: 50%; width: 125px; height: 106px;">
+          <div class="icon-wrap mr-3">
+            <span class="flaticon-hand-sanitizer"></span>
+          </div>
+          <div >
+            <h3 style="font-family: B titr;text-align: right;margin-right: 10px;color: #304786;">درمان</h3>
+          </div>
+        </div>
+      </div>
+      <div class="col-lg-3"
+           data-aos="fade-up"
+           data-aos-delay="0"
+           data-aos-duration="1000">
+        <div class="feature-v1 d-flex align-items-center"style="border: #3375ec; border-style: solid;  border-radius: 50%; width: 125px; height: 106px;">
+          <div class="icon-wrap mr-3">
+            <span class="flaticon-virus"></span>
+          </div>
+          <div>
+            <h3 style="font-family: B titr;text-align: right;margin-right: 10px; color: #304786;">نشانه ها</h3>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+  <div class="site-section" style="padding-bottom: 10rem!important;">
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-6 mb-4 mb-lg-0" data-aos="fade-left" data-aos-offset="300" data-aos-easing="ease-in-sine" data-aos-duration="500">
+          <div class="text-center eee">
+            <img src="{{image2}}" alt="" style="height: 325px;">
+          </div>
+        </div>
+        <div class="col-lg-5 ml-auto"  data-aos="fade-right" data-aos-offset="300" data-aos-easing="ease-in-sine" data-aos-duration="500">
+          <h2 class="" style="font-family: B titr; text-align: center; color: #476bd2; font-size: 30px;">ویروس کرونا چیست؟</h2>
+          <div style="text-align: justify; width: 110%;">
+            <span style="font-family: B nazanin;line-height: 35px;font-size: x-large;">ویروس‌های کرونا خانواده بزرگی از‌ ویروس‌ها هستند
+            که می‌توانند حیوانات و انسان‌ها را بیمار کنند.
+            تعداد زیادی از ویروس‌های کرونا که تاکنون شناخته‌شده‌اند،
+            موجب ابتلا به طیفی از عفونت های دستگاه تنفسی در انسانها می‌شوند.
+            که از سرماخوردگی تا ابتلا به بیماری‌های شدیدتری مثل سندروم تنفسی خاورمیانه
+            و سندروم تنفسی حاد متغیر هستند. ویروس کرونایی که به تازگی کشف شده است
+            عامل ابتلا به بیماری کووید-19 است.
+            </span>
+          </div>
+          <p style="text-align: center; margin-top: 45px; font-family: B nazanin; font-size: large;"><a href="#" class="btn btn-primary" style="font-size: large;">مطالعه بیشتر</a></p>
+        </div>
+      </div>
+    </div>
+  </div >
+
+
+  <div class="site-section bg-primary-light">
+    <div class="container">
+      <div class="row align-items-center">
+
+        <div class="col-lg-6">
+          <div class="row">
+
+            <div class="col-6 col-lg-6 mt-lg-5">
+              <div class="media-v1 bg-1"  data-aos="flip-right" data-aos-delay="0" data-aos-duration="2500">
+                <div class="icon-wrap">
+                  <span class="flaticon-stay-at-home"></span>
+                </div>
+                <div class="body" style="text-align: justify; width: 105%;">
+                  <h3 style="font-family: B titr; text-align: center; color: #476bd2; font-size: larger;">در خانه بمانید</h3>
+                  <p  style="font-size: medium;font-family: B nazanin; line-height: 29px;">در صورت نداشتن کار ضروری در خانه بمانید، زیرا خانه امن ترین مکان برای شماست.</p>
+                </div>
+              </div>
+              <div class="media-v1 bg-1"   data-aos="flip-right" data-aos-delay="0" data-aos-duration="2500">
+                <div class="icon-wrap">
+                  <span class="flaticon-patient"></span>
+                </div>
+                <div class="body" style="text-align: justify; width: 105%;">
+                  <h3 style="font-family: B titr; text-align: center; color: #476bd2; font-size: larger;">ماسک بزنید</h3>
+                  <p  style="font-size: medium;font-family: B nazanin; line-height: 29px;">ماسک‌ها به جلوگیری از گسترش ویروس کرونا کمک می‌کنند و استفاده از آن ها در محیط های شلوغ ضروری است.</p>
+                </div>
+              </div>
+            </div>
+
+            <div class="col-6 col-lg-6">
+              <div class="media-v1 bg-1"    data-aos="flip-right" data-aos-delay="0" data-aos-duration="2500">
+                <div class="icon-wrap">
+                  <span class="flaticon-social-distancing"></span>
+                </div>
+                <div class="body" style="text-align: justify; width: 97%;">
+                  <h3 style="font-family: B titr; text-align: center; color: #476bd2; font-size: larger;">فاصله ایمن را در اجتماعات حفظ کنید</h3>
+                  <p  style="font-size: medium;font-family: B nazanin; line-height: 29px;">از کسی که سرفه و عطسه می کند، دست کم یک متر فاصله بگیرید.</p>
+                </div>
+              </div>
+              <div class="media-v1 bg-1"      data-aos="flip-right" data-aos-delay="0" data-aos-duration="2500">
+                <div class="icon-wrap">
+                  <span class="flaticon-hand-washing"></span>
+                </div>
+                <div class="body" style="text-align: justify; width: 105%;">
+                  <h3 style="font-family: B titr; text-align: center; color: #476bd2; font-size: larger;">دستان خود را بشورید</h3>
+                  <p  style="font-size: medium;font-family: B nazanin; line-height: 29px;">مرتب دست های خودتان را به صورت کامل با آب و صابون بشویید یا با محلولهای  ضدعفونی کننده حاوی الکل تمیز کنید.</p>
+                </div>
+              </div>
+            </div>
+
+          </div>
+        </div>
+
+        <div class="col-lg-5 ml-auto" style="text-align: justify;"   data-aos="fade-right" data-aos-offset="300" data-aos-easing="ease-in-sine" data-aos-duration="500">
+          <h2 class="section-heading mb-4"  style="font-family: B titr; text-align: center; color: #476bd2; font-size: 30px;">چگونه پیشگیری کنیم؟</h2>
+          <div style="width: 110%">
+            <p style="font-family: B nazanin;line-height: 35px;font-size: x-large;">مراقبت‌های ساده‌ای وجود دارد که با انجام آن‌ها میتوان احتمال ابتلا به کووید-19 را کاهش داد و مانع از انتشار آن شد.</p>
+          </div>
+          <ul class="" style="font-family: B nazanin; line-height: 35px;  font-size: 20px; color: #3e5db7;">
+            <li>دوری از اجتماعات و اماکن پرتراکم و شلوغ</li>
+            <li>پرهیز از تماس نزدیک با افراد بیمار و دارای نشانه‌های بیماری</li>
+            <li>ماندن در خانه و رعایت فاصله فیزیکی با افراد</li>
+            <li>شستن مداوم دست‌ها با آب و صابون به مدت 20 ثانیه</li>
+            <li>پوشاندن دهان و بینی با ماسک</li>
+            <li>پرهیز از دست زدن به چشم‌ها، دهان و بینی</li>
+          </ul>
+          <p style="text-align: center; margin-top: 50px; font-family: B nazanin;"><a href="#" class="btn btn-primary" style="font-size: large;">مطالعه بیشتر</a></p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+  <div class="site-section">
+    <div class="container">
+      <div class="row mb-5">
+        <div class="col-lg-7 mx-auto text-center"  data-aos="fade-up" data-aos-offset="300" data-aos-easing="ease-in-sine" data-aos-duration="500">
+          <h2 class="mb-4 section-heading" style="font-family: B titr; text-align: center; color: #476bd2; font-size: 30px;">چه اقداماتی برای مقابله با ویروس کرونا باید انجام دهیم؟</h2>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-lg-6 "  data-aos="fade-left" data-aos-offset="300" data-aos-easing="ease-in-sine" data-aos-duration="500">
+          <div class="row mt-5 pt-5">
+            <div class="col-lg-6 do ">
+              <h3 style="text-align: right; font-family: b titr; color: green;font-size: large;">ما باید</h3>
+              <ul class=" "  style="text-align:right; font-family: B nazanin; line-height: 35px;  font-size: 20px; color: #3e5db7;">
+                <li>در خانه بمانیم</li>
+                <li>ماسک بزنیم</li>
+                <li>مواد ضدعفونی استفاده کنیم</li>
+                <li>دست هایمان را بشوییم</li>
+                <li>فاصله اجتماعی را رعایت کنیم</li>
+              </ul>
+            </div>
+            <div class="col-lg-6 dont ">
+              <h3 style="text-align: right; font-family: b titr; color: #f00;font-size: large;">ما نباید</h3>
+              <ul class=""  style="text-align:right; font-family: B nazanin; line-height: 35px;  font-size: 20px; color: #3e5db7;">
+                <li>با افراد مبتلا در اتباط باشیم</li>
+                <li>با حیوانات در ارتباط باشیم</li>
+                <li>دست بدهیم</li>
+                <li>در تجمعات حاضر شویم</li>
+                <li>به صورتمان دست بزنیم</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-6"   data-aos="fade-right" data-aos-offset="300" data-aos-easing="ease-in-sine" data-aos-duration="500">
+          <img src="assets/images/protect.jpg" alt="Image" class="img-fluid">
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+  <div class="site-section bg-primary-light">
+    <div class="container">
+      <div class="row mb-5">
+        <div class="col-lg-7 mx-auto text-center"   data-aos="fade-up" data-aos-offset="300" data-aos-easing="ease-in-sine" data-aos-duration="500">
+          <h2 class="mb-4 section-heading" style="font-family: B titr; text-align: center; color: #476bd2; font-size: 30px;">علائم بیماری کرونا چیست؟</h2>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-lg-6 mb-4"   data-aos="flip-right" data-aos-delay="0" data-aos-duration="2500">
+          <div class="symptom d-flex">
+            <div class="img">
+              <img src="assets/images/symptom_high-fever.png" alt="Image" class="img-fluid">
+            </div>
+            <div class="text">
+
+              <h3 style=" font-family: B titr; text-align: right; color: #476bd2; font-size: larger;">تب شدید</h3>
+              <p  style="font-size: medium;font-family: B nazanin; line-height: 29px;text-align: right;">در صورت نداشتن کار ضروری در خانه بمانید، زیرا خانه امن ترین مکان برای شماست.</p>
+
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-6 mb-4"   data-aos="flip-right" data-aos-delay="0" data-aos-duration="2500">
+          <div class="symptom d-flex">
+            <div class="img">
+              <img src="assets/images/symptom_cough.png" alt="Image" class="img-fluid">
+            </div>
+            <div class="text">
+
+              <h3 style=" font-family: B titr; text-align: right; color: #476bd2; font-size: larger;">سرفه خشک</h3>
+              <p  style="font-size: medium;font-family: B nazanin; line-height: 29px;text-align: right;">در صورت نداشتن کار ضروری در خانه بمانید، زیرا خانه امن ترین مکان برای شماست.</p>
+
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-6 mb-4"   data-aos="flip-right" data-aos-delay="0" data-aos-duration="2500">
+          <div class="symptom d-flex">
+            <div class="img">
+              <img src="assets/images/symptom_sore-troath.png" alt="Image" class="img-fluid">
+            </div>
+            <div class="text">
+
+              <h3 style=" font-family: B titr; text-align: right; color: #476bd2; font-size: larger;">گلو درد</h3>
+              <p  style="font-size: medium;font-family: B nazanin; line-height: 29px;text-align: right;">در صورت نداشتن کار ضروری در خانه بمانید، زیرا خانه امن ترین مکان برای شماست.</p>
+
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-6 mb-4"   data-aos="flip-right" data-aos-delay="0" data-aos-duration="2500">
+          <div class="symptom d-flex">
+            <div class="img">
+              <img src="assets/images/symptom_headache.png" alt="Image" class="img-fluid">
+            </div>
+            <div class="text">
+
+              <h3 style=" font-family: B titr; text-align: right; color: #476bd2; font-size: larger;">سر درد</h3>
+              <p  style="font-size: medium;font-family: B nazanin; line-height: 29px; text-align: right;">در صورت نداشتن کار ضروری در خانه بمانید، زیرا خانه امن ترین مکان برای شماست.</p>
+
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="row justify-content-md-center">
+        <div class="col-lg-10">
+          <div class="note row" style="text-align: center">
+              <p style="text-align: center; margin: auto; font-family: B nazanin;"><a href="#" class="btn btn-primary" style="font-size: large;">مطالعه بیشتر</a></p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+  <div class="site-footer">
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-4" style="text-align: right">
+          <h2 class="footer-heading mb-4" style=" font-family: b titr;font-size: medium;">درباره کوید</h2>
+          <p  style="font-size: medium;font-family: B nazanin; line-height: 29px; text-align: right;">در صورت نداشتن کار ضروری در خانه بمانید، زیرا خانه امن ترین مکان برای شماست.</p>
+        </div>
+        <div class="col-lg-8">
+          <div class="row">
+            <div class="col-lg-4" style="text-align: right">
+              <h2 class="footer-heading mb-4 text-center" style=" font-family: b titr;font-size: medium;">دسترسی سریع</h2>
+              <ul class="list-unstyled">
+                <li><a href="#" class="footer-text-mainpage">علائم</a></li>
+                <li><a href="#" class="footer-text-mainpage">پیشگیری</a></li>
+                <li><a href="#" class="footer-text-mainpage">پرسش های متداول</a></li>
+                <li><a href="#" class="footer-text-mainpage">درباره ویروس کرونا</a></li>
+                <li><a href="#" class="footer-text-mainpage">تماس با ما</a></li>
+              </ul>
+            </div>
+            <div class="col-lg-4" style="text-align: right">
+              <h2 class="footer-heading mb-4" style=" text-align:center; font-family: b titr;font-size: medium;">لینک های مفید</h2>
+              <ul class="list-unstyled">
+                <li><a href="#" class="footer-text-mainpage">سازمان جهانی بهداشت</a></li>
+                <li><a href="#" class="footer-text-mainpage">سازمان‌های بین‌المللی حقوق بشر</a></li>
+                <li><a href="#" class="footer-text-mainpage">بهداشت همگانی</a></li>
+                <li><a href="#" class="footer-text-mainpage">سازمان‌های بهداشت عمومی</a></li>
+              </ul>
+            </div>
+            <div class="col-lg-4" style="text-align: right">
+              <h2 class="footer-heading mb-4" style="text-align:center; font-family: b titr;font-size: medium;">منابع</h2>
+              <ul class="list-unstyled">
+                <li><a href="#" class="footer-text-mainpage">وبسایت WHO</a></li>
+                <li><a href="#" class="footer-text-mainpage">وبسایت CDC</a></li>
+                <li><a href="#" class="footer-text-mainpage">وبسایت Gov</a></li>
+                <li><a href="#" class="footer-text-mainpage">وبسایت DOH</a></li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+</div>
