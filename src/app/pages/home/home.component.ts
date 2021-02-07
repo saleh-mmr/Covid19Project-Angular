@@ -3,6 +3,7 @@
   import { ChartDataSets, ChartOptions, ChartType } from 'chart.js';
   import { Label } from 'ng2-charts';
   import AOS from 'aos';
+  import {Router} from "@angular/router";
 
   @Component({
     selector: 'app-home',
@@ -22,7 +23,6 @@
     TotalRecovered: any;
     public barChartOptions: ChartOptions = {
       responsive: true,
-      // We use these empty structures as placeholders for dynamic theming.
       scales: { xAxes: [{}], yAxes: [{}] },
       plugins: {
         datalabels: {
@@ -35,7 +35,7 @@
     public barChartType: ChartType = 'bar';
     public barChartLegend = true;
     public barChartData: ChartDataSets[] = [];
-    constructor(private api: ApiService) {
+    constructor(private api: ApiService, private router: Router) {
     }
 
     calculate_params(): void{
@@ -86,7 +86,7 @@
     push_ChartLabel(index: number): void{
       const currentYear = this.date.getFullYear();
       const currentMonth = this.date.getMonth();
-      let currentDay = this.date.getDate();
+      const currentDay = this.date.getDate();
       if (index == 0){
         const label: string = currentYear + '-' + currentMonth + '-' + currentDay + '';
         this.barChartLabels.push(label);
@@ -96,7 +96,7 @@
         this.date.setDate(this.date.getDate() - index);
         let a = this.date.getFullYear();
         let b = this.date.getMonth();
-        let c = this.date.getDate();
+        const c = this.date.getDate();
         if (b == 0){
           b = 12;
           a = a - 1;
@@ -205,5 +205,15 @@
     public chartHovered({ event, active }: { event: MouseEvent, active: {}[] }): void {
       console.log(event, active);
     }
+
+    // tslint:disable-next-line:typedef
+    routeToSignin(){
+      this.router.navigate(['/user']);
+    }
+    // tslint:disable-next-line:typedef
+    routeToSignup(){
+      this.router.navigate(['/user']);
+    }
+
 
   }

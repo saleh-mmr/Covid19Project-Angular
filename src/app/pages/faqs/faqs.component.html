@@ -1,0 +1,282 @@
+<div dir="rtl" class="site-wrap">
+  <div class="site-mobile-menu site-navbar-target">
+    <div class="site-mobile-menu-header">
+      <div class="site-mobile-menu-close mt-3">
+        <span class="icon-close2 js-menu-toggle"></span>
+      </div>
+    </div>
+    <div class="site-mobile-menu-body"></div>
+  </div>
+
+
+  <header class="site-navbar light js-sticky-header site-navbar-target" role="banner">
+    <div class="container">
+      <div class="row align-items-center">
+        <div class="col-6 col-xl-2">
+          <div class="mb-0 site-logo"><a href="" class="mb-0">Covid<span
+            class="text-primary">.</span> </a></div>
+        </div>
+        <div class="col-12 col-md-10 d-none d-xl-block">
+          <nav class="site-navigation position-relative text-right" role="navigation">
+            <ul class="site-menu main-menu js-clone-nav mr-auto d-none d-lg-block">
+              <li><a href="" class="nav-link" style="font-family: B Titr">درباره ما</a></li>
+              <li><a href="" class="nav-link" style="font-family: B Titr">تماس با ما</a></li>
+              <li><a href="/faqs" class="nav-link" style="font-family: B Titr">سوالات متداول</a></li>
+              <li><button style="background-color: #edf1fc; border-radius: 50px; border: 2px solid white; color: #304786; outline: none; font-weight: bold; font-size: 15px; font-family: B Titr; width: 95px; height: 50px; border-color: #3375ec;" [routerLink]="['/user']">ورود</button></li>
+              <li><button style="background-color: #ffffff; border-radius: 50px; border: 2px solid white; color: #304786; outline: none; font-weight: bold; font-size: 15px; font-family: B Titr; width: 95px; height: 50px; border-color: #3375ec; margin-right: 8px;" [routerLink]="['/user']">ثبت نام</button></li>
+
+            </ul>
+          </nav>
+        </div>
+        <div class="col-6 d-inline-block d-xl-none ml-md-0 py-3" style="position: relative; top: 3px;"><a
+          href="#" class="site-menu-toggle js-menu-toggle float-right"><span
+          class="icon-menu h3 text-black"></span></a></div>
+      </div>
+    </div>
+  </header>
+
+
+
+  <div class="hero-2">
+    <div class="row" style="height: 40rem;">
+
+      <div class="col-7">
+        <div style="height: 8rem;">
+
+        </div>
+
+        <div style="height: 50%; text-align: center">
+          <h1 style=" font-family: b titr; font-size: xx-large; color: #3e5db7;">چطور میتونیم کمکتون کنیم؟</h1>
+            <div style="text-align: center">
+              <form action=""  [formGroup]="QuestionForm" (ngSubmit)="ask()" style="width: 80%; margin: auto">
+                <div class="input-container">
+                  <input class="input-box"  type="text" placeholder="سوالتان را از ما بپرسید" id="username" formControlName="question">
+                  <button style="border: none; background: #edf1fc; outline: none; position: absolute; left: 6%; top: 13.5rem">
+                    <i class="fa fa-search" aria-hidden="true" style="color: #385da2;font-size: xx-large;" (click)="ask()"></i>
+                  </button>
+                </div>
+              </form>
+            </div>
+        </div>
+      </div>
+
+      <div class="col-5" style="text-align: right;right: -4%;">
+        <div style="padding-top: 12rem;">
+          <img src="assets/images/illustration.png" alt="" style="width: 615px;">
+        </div>
+      </div>
+
+    </div>
+
+
+
+  </div>
+
+
+  <div style="height: 100px;">
+
+  </div>
+
+  <div style="width: 70%; margin: auto">
+    <mat-accordion>
+
+      <div data-aos="fade-up" data-aos-duration="1500">
+        <mat-expansion-panel hideToggle>
+          <mat-expansion-panel-header>
+            <mat-panel-title class="question-title">
+              آیا استفاده از ماسک برای افراد سالم ضروری است؟
+            </mat-panel-title>
+          </mat-expansion-panel-header>
+          <p class="answer-text">            بر اساس توصیه سازمان بهداشت جهانی استفاده از ماسک‌ برای افراد سالم ضروری نیست
+            امابه افرادی که علایم ابتلا به ویروس کرونا COVID-۱۹ دارند
+            و یا این که از افراد مشکوک یا مبتلا به کرونا مراقبت می کنند،
+            همچنین افرادی که قصد رفتن به مکان های عمومی و پر ازدحام را دارند
+            توصیه می شود از ماسک استفاده کنند.
+          </p>
+        </mat-expansion-panel>
+      </div>
+
+      <div style="height: 20px"></div>
+
+      <div data-aos="fade-up" data-aos-duration="1500">
+        <mat-expansion-panel hideToggle>
+          <mat-expansion-panel-header>
+            <mat-panel-title class="question-title">
+              آیا ویروس کرونا از فردی به فرد دیگر قابل انتقال است؟
+            </mat-panel-title>
+          </mat-expansion-panel-header>
+          <p class="answer-text">
+             جواب این سوال مثبت است. ویروس کرونا دارای علائمی از جمله سرفه، تنگی نفس، خستگی و ضعف است؛ اما در بعضی افراد این علائم مشخص نیست.
+            برای جلوگیری از ابتلا به کرونا از جمله اقداماتی که باید انجام شود می‌توان به شستشو و ضدعفونی دست‌ها اشاره کرد.
+            قرنطینه و محدودیت‌های سفر در این بیماری به‌خصوص برای بیمارانی که وضعیت حاد دارند، نیز می‌تواند تأثیرگذار باشد.
+          </p>
+        </mat-expansion-panel>
+      </div>
+
+      <div style="height: 20px"></div>
+
+      <div data-aos="fade-up" data-aos-duration="1500">
+        <mat-expansion-panel hideToggle>
+          <mat-expansion-panel-header>
+            <mat-panel-title class="question-title">
+              آیا باد گرم دستگاه های خشک کننده دست، ویروس کرونا را می کشد؟
+            </mat-panel-title>
+          </mat-expansion-panel-header>
+          <p class="answer-text">
+            خیر. برای محافظت در برابر این ویروس باید به طور مرتب دستان خود را بشویید.
+          </p>
+        </mat-expansion-panel>
+      </div>
+
+      <div style="height: 20px"></div>
+
+      <div data-aos="fade-up" data-aos-duration="1500">
+        <mat-expansion-panel hideToggle>
+          <mat-expansion-panel-header>
+            <mat-panel-title class="question-title">
+              چه افرادی جز گروه های آسیب پذیر در ابتلا به ویروس کرونا هستند؟
+            </mat-panel-title>
+          </mat-expansion-panel-header>
+          <li class="answer-text">افراد بالای ۶۰ سال</li>
+          <li class="answer-text">زنان باردار</li>
+          <li class="answer-text">افراد با بیماری های تنفسی مزمن</li>
+          <li class="answer-text">افراد مبتلا به دیابت (قند خون بالا) به خصوص افرادی که بیماری در آنها کنترل مناسبی نشده است</li>
+          <li class="answer-text">افراد میتلا به بیماری های قلبی و عروقی</li>
+          <li class="answer-text">افراد با نقص سیستم ایمنی: کسانی که شیمی درمانی می شوند</li>
+          <li class="answer-text">افراد مبتلا به بیماری های نقص ایمنی (بیماری ام اس، لوپوس و ...)</li>
+
+        </mat-expansion-panel>
+      </div>
+
+      <div style="height: 20px">
+
+      </div>
+
+      <div data-aos="fade-up" data-aos-duration="1500">
+        <mat-expansion-panel hideToggle>
+          <mat-expansion-panel-header>
+            <mat-panel-title class="question-title">
+              در صورت تماس و مواجهه با فرد مبتلا به کرونا تا چه زمانی احتمال ابتلا به بیماری وجود دارد؟
+            </mat-panel-title>
+          </mat-expansion-panel-header>
+          <p class="answer-text">
+            با توجه به اینکه طول دوره نهفتگی یا کمون بیماری کرونا تا ۱۰ الی ۱۴ روز گزارش شده است، امکان بروز بیماری تا ۱۴ روز پس از تماس وجود دارد.
+          </p>
+        </mat-expansion-panel>
+      </div>
+
+      <div style="height: 20px">
+
+      </div>
+
+      <div data-aos="fade-up" data-aos-duration="1500">
+        <mat-expansion-panel hideToggle>
+          <mat-expansion-panel-header>
+            <mat-panel-title class="question-title">
+              آیا مصرف خوراکی الکل تاثیری در پیشگیری از ابتلا به ویروس کرونا دارد؟
+            </mat-panel-title>
+          </mat-expansion-panel-header>
+          <p class="answer-text">
+            خیر. مصرف خوراکی الکل هیچ گونه تاثیری در پیشگیری از ابتلا به به ویروس کرونا ندارد.
+          </p>
+        </mat-expansion-panel>
+      </div>
+
+      <div style="height: 20px">
+
+      </div>
+
+      <div data-aos="fade-up" data-aos-duration="1500">
+        <mat-expansion-panel hideToggle>
+          <mat-expansion-panel-header>
+            <mat-panel-title class="question-title">
+              علائم ویروس کرونا چیست؟
+            </mat-panel-title>
+          </mat-expansion-panel-header>
+          <p class="answer-text">
+            ابتلا به این بیماری دارای علائمی از جمله موارد زیر است:
+            <li>سرفۀ خشک</li>
+            <li>تنگی نفس</li>
+            <li>تب</li>
+            <li>خستگی و ضعف</li>
+            علامت اصلی این بیماری تنگی نفس است؛ اما در بعضی افراد علامت این ویروس،
+          اختلال در دستگاه گوارش آنها (تهوع، اسهال و استفراغ) خواهد بود؛
+          اما در بیشتر افراد این ویروس با تنگی نفس خود را نشان می‌دهد.
+          </p>
+        </mat-expansion-panel>
+      </div>
+
+      <div style="height: 20px">
+
+      </div>
+
+      <div data-aos="fade-up" data-aos-duration="1500">
+        <mat-expansion-panel hideToggle>
+          <mat-expansion-panel-header>
+            <mat-panel-title class="question-title">
+              میانگین گروه سنی‌ای که ویروس کرونا هدف قرار می‌دهد، چقدر است؟
+            </mat-panel-title>
+          </mat-expansion-panel-header>
+          <p class="answer-text">
+            میانگین سنی افرادی که مبتلا به بیماری شده‌اند، افراد در سنین بالا و ‌کم‌ترین گروه سنی زیر ۹ سال بوده است.
+          </p>
+        </mat-expansion-panel>
+      </div>
+
+
+    </mat-accordion>
+  </div>
+
+  <div style="height: 300px"></div>
+
+  <div class="site-footer">
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-4" style="text-align: right">
+          <h2 class="footer-heading mb-4" style=" font-family: b titr;font-size: medium;">درباره کوید</h2>
+          <p  style="font-size: medium;font-family: B nazanin; line-height: 29px; text-align: right;">در صورت نداشتن کار ضروری در خانه بمانید، زیرا خانه امن ترین مکان برای شماست.</p>
+        </div>
+        <div class="col-lg-8">
+          <div class="row">
+            <div class="col-lg-4" style="text-align: right">
+              <h2 class="footer-heading mb-4 text-center" style=" font-family: b titr;font-size: medium;">دسترسی سریع</h2>
+              <ul class="list-unstyled">
+                <li><a href="#" class="footer-text-mainpage">علائم</a></li>
+                <li><a href="#" class="footer-text-mainpage">پیشگیری</a></li>
+                <li><a href="#" class="footer-text-mainpage">پرسش های متداول</a></li>
+                <li><a href="#" class="footer-text-mainpage">درباره ویروس کرونا</a></li>
+                <li><a href="#" class="footer-text-mainpage">تماس با ما</a></li>
+              </ul>
+            </div>
+            <div class="col-lg-4" style="text-align: right">
+              <h2 class="footer-heading mb-4" style=" text-align:center; font-family: b titr;font-size: medium;">لینک های مفید</h2>
+              <ul class="list-unstyled">
+                <li><a href="#" class="footer-text-mainpage">سازمان جهانی بهداشت</a></li>
+                <li><a href="#" class="footer-text-mainpage">سازمان‌های بین‌المللی حقوق بشر</a></li>
+                <li><a href="#" class="footer-text-mainpage">بهداشت همگانی</a></li>
+                <li><a href="#" class="footer-text-mainpage">سازمان‌های بهداشت عمومی</a></li>
+              </ul>
+            </div>
+            <div class="col-lg-4" style="text-align: right">
+              <h2 class="footer-heading mb-4" style="text-align:center; font-family: b titr;font-size: medium;">منابع</h2>
+              <ul class="list-unstyled">
+                <li><a href="#" class="footer-text-mainpage">وبسایت WHO</a></li>
+                <li><a href="#" class="footer-text-mainpage">وبسایت CDC</a></li>
+                <li><a href="#" class="footer-text-mainpage">وبسایت Gov</a></li>
+                <li><a href="#" class="footer-text-mainpage">وبسایت DOH</a></li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+
+
+</div>
+
+
+
+

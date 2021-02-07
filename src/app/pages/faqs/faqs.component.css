@@ -1,0 +1,38 @@
+.hero-2{
+  height: 40rem;
+  padding-top: 3rem;
+  border-bottom-left-radius: 50%;
+  background: rgba(78, 115, 223, 0.1);
+  overflow: hidden;
+  border-bottom-right-radius: 50%;
+}
+.input-container{
+  margin: auto;
+  height: 60px;
+  border-radius: 50px;
+  margin-top: 40px;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  background-color: white;
+}
+.input-box{
+  width: 95%;
+  float: left;
+  height: 60px;
+  border-radius: 50px;
+  border: none;
+  outline: none;
+  font-size: 16px;
+  text-align: right;
+}
+.question-title{
+  font-family: b nazanin;
+  font-size: large;
+  color: #3e5db7;
+  font-weight: bold;
+}
+.answer-text{
+  text-align: justify;
+  font-family: b nazanin;
+  font-size: large;
+  line-height: 190%;
+}

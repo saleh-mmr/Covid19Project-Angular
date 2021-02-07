@@ -19,6 +19,8 @@ import {MatFormFieldModule} from '@angular/material/form-field';
 import {MatInputModule} from '@angular/material/input';
 import { UserComponent } from './pages/user/user.component';
 import { ChartsModule } from 'ng2-charts';
+import { FaqsComponent } from './pages/faqs/faqs.component';
+import {MatExpansionModule} from '@angular/material/expansion';
 
 @NgModule({
   declarations: [
@@ -28,6 +30,7 @@ import { ChartsModule } from 'ng2-charts';
     NotfoundComponent,
     HomeComponent,
     UserComponent,
+    FaqsComponent,
   ],
   imports: [
     BrowserModule,
@@ -39,7 +42,8 @@ import { ChartsModule } from 'ng2-charts';
     BrowserAnimationsModule,
     MatFormFieldModule,
     MatInputModule,
-    ChartsModule
+    ChartsModule,
+    MatExpansionModule
   ],
   providers: [
     { provide: HTTP_INTERCEPTORS, useClass: JwtInterceptor, multi: true },

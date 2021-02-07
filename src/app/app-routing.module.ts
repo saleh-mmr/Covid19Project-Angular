@@ -5,10 +5,12 @@ import {NotfoundComponent} from './pages/notfound/notfound.component';
 import {AuthGuard} from './helpers/auth.guard';
 import {ProfileModule} from './pages/profile/profile.module';
 import {UserComponent} from './pages/user/user.component';
+import {FaqsComponent} from './pages/faqs/faqs.component';
 
 const routers: Routes = [
   {path: '', component: HomeComponent},
   {path: 'user', component: UserComponent},
+  {path: 'faqs', component: FaqsComponent},
   {path: 'profile', canActivate: [AuthGuard] ,
     loadChildren: () =>
       import('./pages/profile/profile.module').then(
