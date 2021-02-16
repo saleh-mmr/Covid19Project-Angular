@@ -1,35 +1,84 @@
-<div class="px-3">
-  <div class="row login-row">
+<div style="height: 100vh; background-color: #edf1ff">
+  <div class="row" style="width: 100%; height: 100%;">
 
+    <div #sidebar class="main-content col-1" style="border: solid #4e73df;border-radius: 35px;height: 99vh;background-color: #98c1f1;">
+      <div  *ngIf="isLogin" style=" margin: auto; position: absolute;top: 50%; left: 28%;">
+        <button (click)="turnToSignUp()" class="goto-signup-btn">ثبت نام</button>
+      </div>
+      <div *ngIf="!isLogin">
+        <img src="assets/signup.png" alt="" class="signup-img" data-aos="fade-right"  data-aos-easing="ease-out-cubic"  data-aos-duration="1000">
+      </div>
+      <div style="text-align: center" *ngIf="!isLogin">
+        <form action=""  [formGroup]="signupFormGroup" (ngSubmit)="signup()" class="signup-form">
+          <div class="input-container">
+            <div class="signup-icons">
+              <i class="fa fa-user fa-3x h-100 signup-icon" aria-hidden="true" style="color: #3e5db7;"></i>
+            </div>
+            <input type="text" name="username" placeholder="نام کاربری خود را وارد کنید" id="username" class="input-box text-center" formControlName="username">
+          </div>
 
-    <div class="col-4 signup-col">
-      <div class="vertical-center  text-center signup-content">
-        <h4 class="text-right signup-col-text">افرادی که مبتلا به کرونا هستند، باید مراقب های پشتیبانی برای کاهش علائم دریافت کنند.</h4>
-        <br/>
-        <h4 class="text-right signup-col-text">مراقب سلامت خود باشید و با رعایت این نکات از دیگران نیز محافظت کنید.</h4>
-        <div *ngIf="flag">
-          <button type="button" class="signup-login-btn" (click)="changeform()">ثبت نام</button>
-        </div>
-        <div  *ngIf="!flag">
-          <button type="button" class="signup-login-btn" (click)="changeform()">ورود</button>
-        </div>
+          <div class="input-container">
+            <div class="signup-icons">
+              <i class="fa fa-envelope fa-3x h-100 signup-icon" aria-hidden="true" style="color: #3e5db7;"></i>
+            </div>
+            <input type="text" name="email" placeholder="ایمیل خود را وارد کنید" id="email" class="input-box text-center" formControlName="email">
+          </div>
+
+          <div class="input-container">
+            <div class="signup-icons">
+              <i class="fa fa-key fa-3x h-100 signup-icon" aria-hidden="true" style="color: #3e5db7;"></i>
+            </div>
+            <input type="password" name="password" placeholder="رمز عبور خود را وارد کنید" id="password" class="input-box text-center" formControlName="password">
+          </div>
+
+          <div class="input-container">
+            <div class="signup-icons">
+              <i class="fa fa-key fa-3x h-100 signup-icon" aria-hidden="true" style="color: #3e5db7;"></i>
+            </div>
+            <input type="password" name="cpassword" placeholder="رمز عبور خود را مجددا وارد کنید" id="cpassword" class="input-box text-center" formControlName="cpassword">
+          </div>
+          <button type="submit" class="signup-btn">ثبت نام</button>
+        </form>
       </div>
     </div>
 
-
-    <div class="col-8 login-col">
-      <div class="login-header text-right p-4 text-black">
-        <img src="{{logo}}" alt="" style=" width: 70px">
+    <div #main class="col-11" style="border: solid #4e73df;border-radius: 35px;height: 99vh;background-color: #cbe8f0;">
+      <div  *ngIf="!isLogin" style=" margin: auto; position: absolute;top: 50%; left: 28%;">
+        <button (click)="turnToSignIn()" class="goto-login-btn">ورود</button>
       </div>
-
-      <div *ngIf="flag">
-        <app-login></app-login>
+      <div *ngIf="isLogin">
+        <img src="assets/login.png" alt="" class="login-img"  data-aos="fade-left"  data-aos-easing="ease-out-cubic"  data-aos-duration="1000">
       </div>
-      <div *ngIf="!flag">
-        <app-signup></app-signup>
-      </div>
+      <div style="text-align: center" *ngIf="isLogin"   data-aos="fade-left"  data-aos-easing="ease-out-cubic"  data-aos-duration="1000">
+        <form action=""  [formGroup]="loginFormGroup" (ngSubmit)="login()" style="position: relative;top: 60vh;">
+          <div class="input-container">
+            <div class="signup-icons">
+              <i class="fa fa-user fa-3x h-100 signup-icon" aria-hidden="true" style="color: #00af95;"></i>
+            </div>
+            <input type="text" name="user" placeholder="نام کاربری خود را وارد کنید" id="user" class="input-box text-center" formControlName="user">
+          </div>
 
+          <div class="input-container">
+            <div class="signup-icons">
+              <i class="fa fa-key fa-3x h-100 signup-icon" aria-hidden="true" style="color: #00af95;"></i>
+            </div>
+            <input type="password" name="pass" placeholder="کلمه عبور خود را وارد کنید" id="pass" class="input-box text-center" formControlName="pass">
+          </div>
+          <br>
+          <button type="submit" class="login-btn">ورود</button>
+        </form>
+      </div>
     </div>
-
   </div>
 </div>
+
+
+
+
+
+
+
+
+
+
+

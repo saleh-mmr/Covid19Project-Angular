@@ -21,16 +21,17 @@ import { UserComponent } from './pages/user/user.component';
 import { ChartsModule } from 'ng2-charts';
 import { FaqsComponent } from './pages/faqs/faqs.component';
 import {MatExpansionModule} from '@angular/material/expansion';
+import {MatSnackBarModule} from '@angular/material/snack-bar';
+import { UserSignupSuccessfullyComponent } from './pages/user-signup-successfully/user-signup-successfully.component';
 
 @NgModule({
   declarations: [
     AppComponent,
-    LoginComponent,
-    SignupComponent,
     NotfoundComponent,
     HomeComponent,
     UserComponent,
     FaqsComponent,
+    UserSignupSuccessfullyComponent,
   ],
   imports: [
     BrowserModule,
@@ -43,7 +44,8 @@ import {MatExpansionModule} from '@angular/material/expansion';
     MatFormFieldModule,
     MatInputModule,
     ChartsModule,
-    MatExpansionModule
+    MatExpansionModule,
+    MatSnackBarModule
   ],
   providers: [
     { provide: HTTP_INTERCEPTORS, useClass: JwtInterceptor, multi: true },

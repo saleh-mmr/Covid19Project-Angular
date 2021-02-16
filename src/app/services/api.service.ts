@@ -1,11 +1,20 @@
 import { Injectable } from '@angular/core';
 import {HttpClient, HttpHeaders} from '@angular/common/http';
+import {BehaviorSubject} from 'rxjs';
 
 
 @Injectable({
   providedIn: 'root'
 })
 export class ApiService {
+
+  private messageSource = new BehaviorSubject<any>('default mesage');
+  currentMessage = this.messageSource.asObservable();
+
+  // tslint:disable-next-line:typedef
+  changeMessage(message: any){
+    this.messageSource.next(message);
+  }
 
   constructor(private http: HttpClient) {  }
 
@@ -37,6 +46,7 @@ export class ApiService {
     header.append('Content-Type', 'application/json');
     // tslint:disable-next-line:max-line-length
     const str = 'http://api.covid19api.com/country/iran?from=' + date1 + 'T00:00:00Z&to=' + date2 + 'T00:00:00Z';
+    console.log(str);
     return this.http.get(str , {headers: header});  }
 
 

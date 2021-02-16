@@ -51,7 +51,6 @@
       else if (currenttMonth < 10){
         calculatedMonth = '0' + currenttMonth;
         this.date.setMonth(currenttMonth);
-
       }
       else {
         calculatedMonth = currenttMonth + '';
@@ -68,19 +67,19 @@
         calculatedDay = currentDay + '';
       }
       this.ToDate = this.date.getFullYear() + '-' + calculatedMonth + '-' + calculatedDay;
-
-      let currentYear = this.date.getFullYear();
-      this.date.setDate(this.date.getDate() - 9);
-      let year: string;
-      let month: string;
-      const day: string = this.date.getDate() + '';
-      if (this.date.getMonth() == 0){
-        month = '12';
-        currentYear = currentYear - 1;
-        year = currentYear + '';
+      currentDay = this.date.getDate() - 9;
+      let x: string;
+      if (currentDay == 0){
+        currentDay = currentDay + 1;
+        x = '0' + currentDay;
       }
-      this.FromDate = year + '-' + month + '-' + day;
-      this.date.setDate(this.date.getDate() + 9);
+      else if (currentDay < 10){
+        x = '0' + currentDay;
+      }
+      else {
+        x = currentDay + '';
+      }
+      this.FromDate = this.date.getFullYear() + '-' + calculatedMonth + '-' +  x;
     }
 
     push_ChartLabel(index: number): void{

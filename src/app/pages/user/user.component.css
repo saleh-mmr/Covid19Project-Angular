@@ -1,44 +1,157 @@
-.login-row{
-  height: 100vh;
-}
-
-.signup-col{
-  height: 100vh;
-  background: url("../../../assets/login-back1.png");
-  background-size: cover;
-}
-.signup-content {
-  direction: rtl;
-  margin: 0;
-  position: absolute;
-  top: 40%;
-  left: 50%;
-  -ms-transform: translate(-50%, -50%);
-  transform: translate(-50%, -50%);
-  width: 61%;
-}
-.signup-col-text{
-  color: white;
-  text-align: justify;
-  font-family: "B Nazanin";
-  font-size: 24px;
-}
-
-.signup-login-btn{
-  width: 75%;
-  background-color: #0c836f;
-  border-radius: 50px;
-  margin-top: 15%;
-  border: 2px solid white;
-  color: white;
+.input-container{
+  width: 400px;
   height: 60px;
+  border-radius: 50px;
+  margin: auto auto 0;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  background-color: white;
+}
+.signup-icons{
+  height: 0;
+  width: 181%;
+  font-size: 14px;
+  margin-top: 0.5em;
+}
+.login-btn{
+  width: 400px;
+  margin: auto auto 5%;
+  background: #00af95;
+  height: 60px;
+  border-radius: 50px;
+  border: none;
   outline: none;
-  font-weight: bold;
+  color: white;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
   font-size: 23px;
   font-family: "B Titr";
 }
+.input-box{
+  width: 95%;
+  float: left;
+  height: 60px;
+  border-radius: 50px;
+  border: none;
+  outline: none;
+  font-size: 16px;
+}
+.user-icon{
+  color: #0c836f;
+  font-size: 2.5em !important;
+  position: absolute;
+  right: 36%;
+  top: 50%;
+}
 
-.login-col{
-  width: 60vh;
-  background-color: white;
+
+.col-1{
+  transition-duration: 1s;
+}
+.col-11{
+  transition-duration: 1s;
+}
+.col-9{
+  transition-duration: 1s;
+}
+.col-3{
+  transition-duration: 1s;
+}
+.login-img{
+  position: absolute;
+  top: 16vh;
+  left: 70vh;
+  height: 40%;
+}
+.signup-img{
+position: absolute;
+top: 7vh;
+left: 40rem;
+height: 46%;
+border-radius: 30px;
+}
+.login-form{
+text-align: center;
+width: 550px;
+margin: auto;
+position: relative;
+top: 60vh;
+}
+.signup-form{
+text-align: center;
+width: 550px;
+margin: auto;
+position: relative;
+top: 52vh;
+}
+.signup-btn{
+width: 400px;
+margin: auto auto 20px;
+background: #385da2;
+height: 60px;
+border-radius: 50px;
+border: none;
+outline: none;
+color: white;
+box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+font-size: 23px;
+font-family: "B Titr";
+}
+.login-input-box{
+text-align: right;
+width: 400px;
+float: left;
+height: 60px;
+border-radius: 50px;
+border: none;
+outline: none;
+font-size: 16px;
+}
+.login-input-container{
+width: 400px;
+height: 60px;
+border-radius: 50px;
+box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+text-align: right;
+margin: auto auto 20px;
+}
+.signup-input-box{
+text-align: right;
+width: 400px;
+float: left;
+height: 60px;
+border-radius: 50px;
+border: none;
+outline: none;
+font-size: 16px;
+}
+.signup-input-container{
+text-align: right;
+width: 400px;
+height: 60px;
+border-radius: 50px;
+margin: auto auto 10px;
+box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+.goto-login-btn{
+width: 90px;
+background: #489fb7;
+height: 50px;
+border-radius: 50px;
+border: none;
+outline: none;
+color: white;
+box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+font-size: 19px;
+font-family: "B Titr";
+}
+.goto-signup-btn{
+width: 90px;
+background: #4e73df;
+height: 50px;
+border-radius: 50px;
+border: none;
+outline: none;
+color: white;
+box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+font-size: 19px;
+font-family: "B Titr";
 }
